@@ -8,9 +8,9 @@ window.onload = function() {
 };
 
 let excuseGen = () => {
-  let who = ["The dog", "My grandma", "His turtle", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "the keys", "the car"];
+  let who = ["The dog ", "My grandma ", "His turtle ", "My bird "];
+  let action = ["ate ", "peed ", "crushed ", "broke "];
+  let what = ["my homework ", "the keys ", "the car "];
   let when = [
     "before the class",
     "right on time",
@@ -18,10 +18,18 @@ let excuseGen = () => {
     "during my lunch",
     "while I was praying"
   ];
-  let whoIndice = who.length;
-  let actionIndice = action.length;
-  let whatIndice = what.length;
-  let whenIndice = when.length;
+  let whoIndice = Math.floor(Math.random() * who.length);
+  let actionIndice = Math.floor(Math.random() * action.length);
+  let whatIndice = Math.floor(Math.random() * what.length);
+  let whenIndice = Math.floor(Math.random() * when.length);
 
-  return whoIndice + actionIndice + whatIndice + whenIndice;
+  return (
+    who[whoIndice] +
+    " " +
+    action[actionIndice] +
+    " " +
+    what[whatIndice] +
+    " " +
+    when[whenIndice]
+  );
 };
